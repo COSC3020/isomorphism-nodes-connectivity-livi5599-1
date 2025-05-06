@@ -10,9 +10,13 @@ $G_1=(V_1 , E_1)$ is isomorphic to $G_2 = (V_2, E_2)$ if there exists a
 one-to-one and onto function (bijection) $f: V_1 \rightarrow V_2$ such that $(u,v)
 \in E_1$ iff $(f(u),f(v)) \in E_2$.
 
-Let $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$, and let both graphs have n nodes and be completely connected.  Since they are completely connected, there is only one way to represent the graph.  For example, a completely connected graph with three nodes can only be represented/drawn as a triangle.  Going back to $G_1$ and $G_2$, since they are completely connected, this means there is an edge between every pair of nodes, allowing for a one-to-one and onto function (bijection) $f: V_1 \rightarrow V_2$ such that $(u, v) \in E_1$ iff $(f(u), f(v)) \in E_2$.  A bijection is possible, as there is always a way for a node to be connected to another node no matter the graph.
+Let $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$, and let both graphs have v vertices and be completely connected.  Being completely connected, every distinct vertex is connected to every other vertex by an edge e.  Since they are completely connected, their structure is unique, as there is only one way for vertices to be connected when every other vertex.
 
-To prove that a bijection is possible, consider a completely connected graph (f) with four nodes (a, b, c, d), and another completely connected graph (g) with the same four nodes in a different order (c, a, d, b).  This means that a maps to c, b to a, c to b, and d to d, which means a one-to-one and onto function can be defined.  Because every node in a complete graph is connected to every other node, any relabeling of nodes preserves the edge structure.  This shows that a bijection between the vertex sets exists, thus satisfying the condition for isomorphism.  This logic applies to all complete graphs with the same number of nodes.
+Based on the fact that both graphs have the same number of vertices, there exists a one-to-one and onto function $f: V_1 \rightarrow V_2$ such that vertices $(u, v) \in E_1$ iff $(f(u), f(v)) \in E_2$.  This function is a bijection, because every vertex in $V_1$ can be assigned to a unique vertex in $V_2$ with no vertices left over, and vice versa.  This is possible because both graphs have the same number of vertices and the same edge pattern.
+
+If vertices $(u, v)$ in $G_1$ are connected, then their images under the bijection $(f(u), f(v))$ must be connected in the other graph.  This is because of the fact that every pair is connected in both graphs, which means the edge set in each graph includes all possible edges, meaning every vertex is connected to every other vertex in each graph.
+
+Because this function f preserves edges and is a bijection, as shown above, the two graphs G1 and G2 are isomorphic by definition.  This applies to all graphs that have the same number of vertices and are completely connected.
 
 -----
 
